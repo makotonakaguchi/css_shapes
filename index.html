@@ -1,0 +1,108 @@
+<!doctype html>
+<html vocab="http://schema.org/" typeof="WebPage">
+<head>
+<meta charset="UTF-8" />
+<meta property="keywords" content="CSS3, CSS Shapes, Example" />
+<meta property="description" content="CSS Shapesの実装例です。webkit、chrome canary, iOS7 Safariなどのブラウザで確認することができます。" />
+<title>CSS Shapes Example</title>
+<style>
+
+html {
+  background: #f7f6f4;
+  margin: 1em;
+}
+#vid {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+}
+section {
+  display: block;
+  clear: left;
+  margin-bottom: 3em;
+}
+h3+p {
+  margin: 0.5em 0;
+}
+b {
+  font: 4em helvetica ,sans-serif;
+}
+
+#triangle {
+  position: relative;
+  float: right;
+  width: 800px;
+  height: 800px;
+  -webkit-shape-outside: polygon(800px 0px, 800px 800px, 0px 800px);
+}
+#triangle img {
+  position: absolute;
+  top: 0px;
+  right: 0px
+}
+
+#circle {
+  position: relative;
+  float: left;
+  width: 300px;
+  height: 300px;
+  background: #eee;
+  border-radius: 150px;
+  -webkit-shape-outside: circle(150px,150px,150px);
+  -webkit-shape-margin: 0.5em;
+  font: 70px helvetica, sans-serif;
+}
+#floatImg {
+  float: left;
+  -webkit-shape-outside: url("so.png");
+  -webkit-shape-image-threshold: 0.1;
+  -webkit-shape-margin: 1.5em;
+}
+</style>
+</head>
+<body>
+<h1>CSS Shapes Example</h1>
+<article>
+<h2>The shape-outside Property</h2>
+<section>
+<h3>Basic Shapes: circle, polygon</h3>
+<p><span id="circle">circle<img src="A.png" width="50%" alt="A" /></span><span id="triangle"><img src="shapes.png" alt="shapes" /></span>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+Aenean commodo ligula eget dolor. Aenean massa. 
+Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. 
+In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. 
+Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. 
+Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. 
+Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. 
+Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. 
+Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. 
+Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. 
+Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. 
+Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. 
+Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. 
+Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. 
+Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla. 
+Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. 
+Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. 
+Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. 
+Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. 
+Vestibulum volutpat pretium libero. Cras id dui. 
+Aenean ut eros et nisl sagittis vestibulum. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. 
+Sed lectus. Donec mollis hendrerit risus. Phasellus nec sem in justo pellentesque facilisis. Etiam imperdiet imperdiet orci. 
+Nunc nec neque. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi. 
+Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. 
+Maecenas malesuada. Praesent congue erat at massa. Sed cursus turpis vitae tortor. 
+Donec posuere vulputate arcu. Phasellus accumsan cursus velit. 
+</section>
+<section>
+<h3>Shapes from Image</h3>
+<p><img id="floatImg" src="so.png" alt="そ">のころわたくしは、モリーオ市の博物局に勤めて居りました。<br />
+　十八等官でしたから役所のなかでも、ずうっと下の方でしたし<ruby><rb>俸給</rb><rp>（</rp><rt>ほうきゅう</rt><rp>）</rp></ruby>もほんのわずかでしたが、受持ちが標本の採集や整理で生れ付き好きなことでしたから、わたくしは毎日ずいぶん愉快にはたらきました。殊にそのころ、モリーオ市では競馬場を植物園に<ruby><rb>拵</rb><rp>（</rp><rt>こしら</rt><rp>）</rp></ruby>え直すというので、その景色のいいまわりにアカシヤを植え込んだ広い地面が、切符売場や信号所の建物のついたまま、わたくしどもの役所の方へまわって来たものですから、わたくしはすぐ宿直という名前で月賦で買った小さな蓄音器と二十枚ばかりのレコードをもって、その番小屋にひとり住むことになりました。わたくしはそこの馬を置く場所に板で小さなしきいをつけて一疋の山羊を飼いました。毎朝その乳をしぼってつめたいパンをひたしてたべ、それから黒い革のかばんへすこしの書類や雑誌を入れ、靴もきれいにみがき、並木のポプラの影法師を大股にわたって市の役所へ出て行くのでした。<br />
+　あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。<br />
+　またそのなかでいっしょになったたくさんのひとたち、ファゼーロとロザーロ、羊飼のミーロや、顔の赤いこどもたち、地主のテーモ、山猫博士のボーガント・デストゥパーゴなど、いまこの暗い巨きな石の建物のなかで考えていると、みんなむかし風のなつかしい青い幻燈のように思われます。では、わたくしはいつかの小さなみだしをつけながら、しずかにあの年のイーハトーヴォの五月から十月までを書きつけましょう。<br />
+</p>
+</section>
+</article>
+<a id="vid" href="http://makotonakaguchi.github.io/" rel="Index"><img src="http://makotonakaguchi.net/images/makoto_2x.gif" width="64" alt=""></a>
+</body>
+</html>
